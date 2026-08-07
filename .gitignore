@@ -1,0 +1,11 @@
+# Ignorar arquivos de dados
+*.csv
+*.xlsx
+*.xls
+
+# Ignorar pastas virtuais do Python
+.venv/
+__pycache__/
+
+# Ignorar arquivos sensíveis de senhas (ex: .env)
+.env
