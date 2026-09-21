@@ -1,11 +1,11 @@
 import traceback
 
 import pandas as pd
-from sqlalchemy import create_engine
-from sqlalchemy.dialects.oracle import NUMBER, TIMESTAMP, VARCHAR2
 
 # Importa a função de conexão do config.py
 from config import conectar_oracle
+from sqlalchemy import create_engine
+from sqlalchemy.dialects.oracle import NUMBER, TIMESTAMP, VARCHAR2
 
 # -------------------------------------------------------
 # FUNÇÕES DO PIPELINE ETL
@@ -134,7 +134,7 @@ def run_etl_pipeline():
         processed_data = transform_data(raw_data)
         load_data(processed_data, dest_tb)
         
-    except Exception:
+    except Exception:  # noqa: BLE001
         print("Pipeline ETL falhou. Detalhes do erro:")
         traceback.print_exc()
 

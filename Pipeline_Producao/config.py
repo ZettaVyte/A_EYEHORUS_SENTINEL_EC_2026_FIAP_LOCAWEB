@@ -1,6 +1,7 @@
 import os
-from dotenv import load_dotenv
+
 import oracledb
+from dotenv import load_dotenv
 
 # Carrega as variáveis de ambiente (.env)
 load_dotenv()
