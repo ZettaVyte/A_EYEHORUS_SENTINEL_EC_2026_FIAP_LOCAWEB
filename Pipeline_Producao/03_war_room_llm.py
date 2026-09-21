@@ -70,7 +70,7 @@ def orquestrar_war_room():
         return
 
     # Para o MVP, filtramos apenas os 10 incidentes mais críticos
-    df_top_alertas = df_alertas.sample(min(10, len(df_alertas))).copy()
+    df_top_alertas = df_alertas.copy()
     
     recomendacoes = []
     for index, row in df_top_alertas.iterrows():
